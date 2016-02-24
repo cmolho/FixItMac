@@ -1,5 +1,5 @@
 /**
- * Created by codymolho on 2/23/16.
+ * Created by codymolho on 2/23/16. And made spectacular by Rae, Minju, and Ana!
  */
 
 angular.module('starter.services', [])
