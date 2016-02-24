@@ -1,8 +1,12 @@
 <ion-view view-title="FixItMac">
   <ion-content>
     <ion-list>
+
       <ion-item ng-repeat="printer in printers">
-        {{printer.name}}
+        <a class="item item-icon-left" href="#">
+          <i class="icon ion-printer"></i>
+          {{printer.name}}
+        </a>
       </ion-item>
     </ion-list>
   </ion-content>

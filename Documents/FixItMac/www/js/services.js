@@ -10,9 +10,6 @@ angular.module('starter.services', [])
     name: "Dupre",
     location: "Dupre"
   },{
-    id: 1,
-    location: "Dupre Hall 253"
-  }, {
     id: 2,
     name: "Campus Center",
     location: "Campus Center 2nd Floor"
