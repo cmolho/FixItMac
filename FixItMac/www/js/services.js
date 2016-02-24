@@ -13,6 +13,18 @@ angular.module('starter.services', [])
     id: 1,
     name: "Lib",
     location: "Lib"
+  }, {
+    id: 2,
+    name: "Campus Center",
+    location: "Campus Center"
+  }, {
+    id: 3,
+    name: "Kirk1",
+    location: "Kirk"
+  }, {
+    id: 4,
+    name: "Kirk2",
+    location: "Kirk"
   }];
 
   return {
