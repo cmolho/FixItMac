@@ -19,11 +19,11 @@ angular.module('starter.services', [])
     location: "Campus Center"
   }, {
     id: 3,
-    name: "Kirk1",
+    name: "Kirk 1",
     location: "Kirk"
   }, {
     id: 4,
-    name: "Kirk2",
+    name: "Kirk 2",
     location: "Kirk"
   }, {
     id: 4,
