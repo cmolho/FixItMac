@@ -31,6 +31,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/main',
       templateUrl: 'templates/main.html',
       controller: 'MainCtrl'
+    })
+
+    .state('profile', {
+      url: '/profile/:id',
+      templateUrl: 'templates/profile.html',
+      controller: 'ProfileCtrl'
     });
 
   $urlRouterProvider.otherwise('/main');

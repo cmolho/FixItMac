@@ -34,6 +34,14 @@ angular.module('starter.services', [])
   return {
     all: function() {
       return printers;
+    },
+    get: function(printerID) {
+      for (var i = 0; i < printers.length; i++) {
+        if (printers[i].id === parseInt(printerID)) {
+          return printers[i];
+        }
+      }
+      return null;
     }
   };
 

@@ -1,7 +1,7 @@
 <ion-view view-title="FixItMac">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="printer in printers">
+      <ion-item ng-repeat="printer in printers" href="#/profile/{{printer.id}}">
         {{printer.name}}
       </ion-item>
     </ion-list>
