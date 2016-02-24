@@ -1,5 +1,5 @@
 /**
- * Created by codymolho on 2/23/16. And made spectacular by Rae, Minju, and Ana!
+ * Created by codymolho on 2/23/16.
  */
 
 angular.module('starter.services', [])
@@ -8,8 +8,8 @@ angular.module('starter.services', [])
   var printers = [{
     id: 0,
     name: "Dupre",
-    location: "Dupre Hall 253"
-  }, {
+    location: "Dupre"
+  },{
     id: 2,
     name: "Campus Center",
     location: "Campus Center 2nd Floor"
@@ -30,14 +30,6 @@ angular.module('starter.services', [])
   return {
     all: function() {
       return printers;
-    },
-    get: function(printerID) {
-      for (var i = 0; i < printers.length; i++) {
-        if (printers[i].id === parseInt(printerID)) {
-          return printers[i];
-        }
-      }
-      return null;
     }
   };
 
