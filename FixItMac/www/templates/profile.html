@@ -2,7 +2,34 @@
 
 <ion-view view-title="{{printer.name}}">
   <ion-content>
-    <h1>yay</h1>
-    <h2>this is the page for printer number {{printer.id}} called {{printer.name}}</h2>
+
+    <div class="card">
+      <div class="item item-text-wrap">
+        <p align="right" style="font-size:30px; font-family: 'Helvetica Neue'; color: black" >
+          {{printer.name}}
+          <img src="http://cybercare247.com/wp-content/uploads/2015/06/c02949277.png"
+               style="width: 100px; height: 100px" align="left">
+        </p>
+        <p style="font-size: 6px">
+        </p>
+        <p align="right" style="font-size: 20px";>
+          no. {{printer.id}}
+        </p>
+      </div>
+    </div>
+
+    <button class="button button-block button-assertive">
+      REPORT
+    </button>
+
+    <ion-list>
+
+      <ion-checkbox ng-model="filter.blue"> out of paper </ion-checkbox>
+      <ion-checkbox ng-model="filter.yellow"> out of ink </ion-checkbox>
+      <ion-checkbox ng-model="filter.pink"> paper jammed </ion-checkbox>
+      <ion-checkbox ng-model="filter.red"> other... </ion-checkbox>
+
+    </ion-list>
   </ion-content>
 </ion-view>
+
