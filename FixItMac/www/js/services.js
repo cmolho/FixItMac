@@ -3,7 +3,7 @@
  */
 
 /*
-Printers four properties: name, location, status (true if working/false if not working)
+Printers four properties: id, name, location, status (true if working/false if not working)
  */
 angular.module('starter.services', [])
 
