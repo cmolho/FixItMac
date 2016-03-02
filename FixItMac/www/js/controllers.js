@@ -22,11 +22,14 @@ angular.module('starter.controllers', [])
         confirmPopup.then(function(result) {
           if(result) {
             //href="#/reward/{{printer.id}}"
-            $state.go('#/reward/{{printer.id}}');
-          } else {
-            //href="#/profile/{{printer.id}}"
-            $state.go('#/profile/{{printer.id}}');
+            //$state.go('#/reward/{{printer.id}}');
+            $state.go('reward.html');
+
           }
+          // else {
+          //  //href="#/profile/{{printer.id}}"
+          //  $state.go('#/profile/{{printer.id}}');
+          //}
         });
 
       };
