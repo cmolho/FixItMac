@@ -8,7 +8,7 @@ angular.module('starter.controllers', [])
     $scope.printers = Printers.all()
   })
 
-  .controller('ProfileCtrl', function($scope, $stateParams, Printers, $ionicPopup, $state) {
+  .controller('ProfileCtrl', function($scope, $stateParams, Printers, $ionicPopup) {
     $scope.printer = Printers.get($stateParams.id),
       $scope.showConfirm = function() {
 
@@ -21,20 +21,13 @@ angular.module('starter.controllers', [])
 
         confirmPopup.then(function(result) {
           if(result) {
-            //href="#/reward/{{printer.id}}"
-            //$state.go('#/reward/{{printer.id}}');
-            $state.go('reward.html');
-
+            document.location.href = "#/reward/{{printer.id}}";
           }
-          // else {
-          //  //href="#/profile/{{printer.id}}"
-          //  $state.go('#/profile/{{printer.id}}');
-          //}
         });
-
       };
   })
+
   .controller('RewardCtrl', function($scope, $state, $stateParams, Printers) {
-    $scope.printer = Printers.get($stateParams.id)
+    $scope.printer = Printers.get($stateParams.id);
   });
 

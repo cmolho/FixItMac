@@ -41,7 +41,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
       .state('reward', {
         url:'/reward/:id',
-        templateUrl: 'templates/main.html',
+        templateUrl: 'templates/reward.html',
         controller: 'RewardCtrl'
 
       });
