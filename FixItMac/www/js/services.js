@@ -12,7 +12,7 @@ angular.module('starter.services', [])
     id: 0,
     name: "Dupre",
     location: "Dupre Hall 253",
-    status: true
+    status: false
   }, {
     id: 2,
     name: "Campus Center",
