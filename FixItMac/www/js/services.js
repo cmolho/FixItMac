@@ -82,14 +82,6 @@ angular.module('starter.services', [])
         }
       }
       return null;
-    },
-    getPrintersOfLocCat: function(locCat){
-      for (var i = 0; i < printers.length; i++) {
-        if (printers[i].locationCategory === locCat) {
-          return printers[i];
-        }
-      }
-      return null;
     }
   };
 })
@@ -125,7 +117,7 @@ angular.module('starter.services', [])
     getPrintersOfLocCat: function(locCat){
       for (var i = 0; i < printers.length; i++) {
         if (printers[i].locationCategory === locCat) {
-          return printers[i];
+          return printers[i].id;
         }
       }
       return null;
