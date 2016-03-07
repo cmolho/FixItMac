@@ -1,7 +1,18 @@
 <ion-view view-title="FixItMac">
   <!--<link rel="stylesheet" type="text/css" href="style.css">-->
   <ion-content >
+
     <ion-list>
+
+      <div class="list">
+        <div class="item item-divider">
+          dorms
+        </div>
+
+        <div class="item item-divider">
+          cc
+        </div>
+
       <ion-item ng-repeat="printer in printers">
         <a ng-if="printer.status === false" class="item item-icon-left, assertive-border"   href="#/profile/{{printer.id}}" >
           <i class="icon ion-printer assertive" ></i>
@@ -12,6 +23,8 @@
           {{printer.name}}
         </a>
       </ion-item>
+        </div>
     </ion-list>
   </ion-content>
 </ion-view>
+
