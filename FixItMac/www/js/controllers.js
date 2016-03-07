@@ -4,8 +4,9 @@
 
 angular.module('starter.controllers', [])
 
-  .controller('MainCtrl', function($scope, $state, $stateParams, Printers) {
+  .controller('MainCtrl', function($scope, $state, $stateParams, Printers, LocationCategories) {
     $scope.printers = Printers.all()
+    $scope.locationCategories=LocationCategories.all()
   })
 
   .controller('ProfileCtrl', function($scope, $stateParams, Printers, $ionicPopup) {

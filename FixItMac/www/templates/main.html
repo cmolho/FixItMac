@@ -2,29 +2,28 @@
   <!--<link rel="stylesheet" type="text/css" href="style.css">-->
   <ion-content >
 
-    <ion-list>
+    <div class="list">
 
-      <div class="list">
-        <div class="item item-divider">
-          dorms
-        </div>
+      <div class="item item-divider" ng-repeat="locationCategory in locationCategories">
+        {{locationCategory.name}}
+        <ion-list>
+          <ion-item ng-repeat="printer in printers">
+              <a ng-if="printer.status === false && printer.locationCategory==locationCategory.id" class="item item-icon-left, assertive-border"   href="#/profile/{{printer.id}}" >
+                <i class="icon ion-printer assertive" ></i>
+                {{printer.name}}
+              </a>
+              <a ng-if="printer.status === true && printer.locationCategory==locationCategory.id" class="item item-icon-left, balanced-border"  href="#/profile/{{printer.id}}" >
+                <i class="icon ion-printer balanced"></i>
+                {{printer.name}}
+              </a>
+          </ion-item>
+        </ion-list>
+      </div>
 
-        <div class="item item-divider">
-          cc
-        </div>
 
-      <ion-item ng-repeat="printer in printers">
-        <a ng-if="printer.status === false" class="item item-icon-left, assertive-border"   href="#/profile/{{printer.id}}" >
-          <i class="icon ion-printer assertive" ></i>
-          {{printer.name}}
-        </a>
-        <a ng-if="printer.status === true" class="item item-icon-left, balanced-border"  href="#/profile/{{printer.id}}" >
-          <i class="icon ion-printer balanced"></i>
-          {{printer.name}}
-        </a>
-      </ion-item>
-        </div>
-    </ion-list>
+
+    </div>
+
+
   </ion-content>
 </ion-view>
-
