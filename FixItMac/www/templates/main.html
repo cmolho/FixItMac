@@ -6,23 +6,24 @@
 
       <div class="item item-divider" ng-repeat="locationCategory in locationCategories">
         {{locationCategory.name}}
+        <ion-list>
+          <ion-item ng-repeat="printer in printers">
+            <a ng-if="printer.status === false" class="item item-icon-left, assertive-border"   href="#/profile/{{printer.id}}" >
+              <i class="icon ion-printer assertive" ></i>
+              {{printer.name}}
+            </a>
+            <a ng-if="printer.status === true" class="item item-icon-left, balanced-border"  href="#/profile/{{printer.id}}" >
+              <i class="icon ion-printer balanced"></i>
+              {{printer.name}}
+            </a>
+          </ion-item>
+        </ion-list>
       </div>
+
 
 
     </div>
 
 
-    <ion-list>
-      <ion-item ng-repeat="printer in printers">
-        <a ng-if="printer.status === false" class="item item-icon-left, assertive-border"   href="#/profile/{{printer.id}}" >
-          <i class="icon ion-printer assertive" ></i>
-          {{printer.name}}
-        </a>
-        <a ng-if="printer.status === true" class="item item-icon-left, balanced-border"  href="#/profile/{{printer.id}}" >
-          <i class="icon ion-printer balanced"></i>
-          {{printer.name}}
-        </a>
-      </ion-item>
-    </ion-list>
   </ion-content>
 </ion-view>
