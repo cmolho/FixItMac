@@ -67,7 +67,7 @@ angular.module('starter.services', [])
     inkStatus: true,
     paperStatus: true,
     jamStatus: true,
-    otherStatus: true,
+    otherStatus: false,
     status: true
   }];
 
