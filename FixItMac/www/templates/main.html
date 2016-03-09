@@ -6,7 +6,7 @@
       <div class="item item-divider" ng-repeat="locationCategory in locationCategories">
         {{locationCategory.name}}
 
-        <ion-list ng-repeat="printer in printers" ng-if="locationCategory.id === printer.locationCategory">
+        <ion-list ng-repeat="printer in printers | orderBy:'name'" ng-if="locationCategory.id === printer.locationCategory">
         <ion-item >
               <a ng-if="printer.status === false" class="item item-icon-left, assertive-border"   href="#/profile/{{printer.id}}" >
                 <i class="icon ion-printer assertive" ></i>
