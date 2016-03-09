@@ -4,13 +4,14 @@
 
 angular.module('starter.controllers', [])
 
+
   .controller('MainCtrl', function($scope, $state, $stateParams, Printers, LocationCategories) {
-    $scope.printers = Printers.all()
-    $scope.locationCategories=LocationCategories.all()
+    $scope.printers = Printers.all();
+    $scope.locationCategories = LocationCategories.all();
   })
 
   .controller('ProfileCtrl', function($scope, $stateParams, Printers, $ionicPopup) {
-    $scope.printer = Printers.get($stateParams.id),
+    $scope.printer = Printers.get($stateParams.id);
       $scope.showConfirm = function() {
 
         var confirmPopup = $ionicPopup.confirm({
