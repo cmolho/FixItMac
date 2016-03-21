@@ -18,7 +18,7 @@ angular.module('starter.controllers', [])
           title: 'Are you sure?',
           template: 'An automatic email will be generated to ITS if you report.',
           cancelText:'Cancel',
-          okText: 'Yes, send the report!'
+          okText: 'Yes'
         });
 
         confirmPopup.then(function(result) {
@@ -28,8 +28,7 @@ angular.module('starter.controllers', [])
         });
       };
   })
-
   .controller('RewardCtrl', function($scope, $state, $stateParams, Printers) {
     $scope.printer = Printers.get($stateParams.id);
-  });
-
+  })
+  ;
