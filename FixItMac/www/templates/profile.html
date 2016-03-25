@@ -26,13 +26,16 @@
 
       <li class="item item-checkbox">
         Out of Paper
+        <a ng-if="printer.paperStatus === false"><span class="badge badge-assertive">Reported</span></a>
         <label class="checkbox">
           <input type="checkbox" ng-model="isChecked1" ng-disabled="{{printer.paperStatus}}===false">
         </label><br/>
+
       </li>
 
       <li class="item item-checkbox">
         Out of Ink
+        <a ng-if="printer.inkStatus === false"><span class="badge badge-assertive">Reported</span></a>
         <label class="checkbox">
           <input type="checkbox" ng-model="isChecked2" ng-disabled="{{printer.inkStatus}}===false">
         </label><br/>
@@ -40,6 +43,7 @@
 
       <li class="item item-checkbox">
         Paper Jammed
+        <a ng-if="printer.jamStatus === false"><span class="badge badge-assertive">Reported</span></a>
         <label class="checkbox">
           <input type="checkbox" ng-model="isChecked3" ng-disabled="{{printer.jamStatus}}===false">
         </label><br/>
@@ -47,6 +51,7 @@
 
       <li class="item item-checkbox">
         Other
+        <a ng-if="printer.otherStatus === false"><span class="badge badge-assertive">Reported</span></a>
         <label class="checkbox">
           <input type="checkbox" ng-model="isChecked4" ng-disabled="{{printer.otherStatus}}===false">
         </label><br/>
