@@ -7,16 +7,16 @@
         {{locationCategory.name}}
 
         <ion-list ng-repeat="printer in printers | orderBy:'name'" ng-if="locationCategory.id === printer.locationCategory">
-        <ion-item >
-              <a ng-if="printer.status === false" class="item item-icon-left, assertive-border"   href="#/profile/{{printer.id}}" >
-                <i class="icon ion-printer assertive" ></i>
+              <a ng-if="printer.status === false" class="item item-icon-left item-icon-right"   href="#/profile/{{printer.id}}" >
+                <i class="icon ion-printer" ></i>
                 {{printer.name}}
+                <i class="icon ion-close-circled assertive"></i>
               </a>
-              <a ng-if="printer.status === true" class="item item-icon-left, balanced-border"  href="#/profile/{{printer.id}}" >
-                <i class="icon ion-printer balanced"></i>
+              <a ng-if="printer.status === true" class="item item-icon-left item-icon-right"  href="#/profile/{{printer.id}}" >
+                <i class="icon ion-printer"></i>
                 {{printer.name}}
+                <i class="icon ion-checkmark-circled balanced"></i>
               </a>
-          </ion-item>
         </ion-list>
 
       </div>
