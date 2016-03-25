@@ -27,28 +27,28 @@
       <li class="item item-checkbox">
         Out of Paper
         <label class="checkbox">
-          <input type="checkbox" ng-model="isChecked1" >
+          <input type="checkbox" ng-model="isChecked1" ng-disabled="{{printer.paperStatus}}===false">
         </label><br/>
       </li>
 
       <li class="item item-checkbox">
         Out of Ink
         <label class="checkbox">
-          <input type="checkbox" ng-model="isChecked2">
+          <input type="checkbox" ng-model="isChecked2" ng-disabled="{{printer.inkStatus}}===false">
         </label><br/>
       </li>
 
       <li class="item item-checkbox">
         Paper Jammed
         <label class="checkbox">
-          <input type="checkbox" ng-model="isChecked3">
+          <input type="checkbox" ng-model="isChecked3" ng-disabled="{{printer.jamStatus}}===false">
         </label><br/>
       </li>
 
       <li class="item item-checkbox">
         Other
         <label class="checkbox">
-          <input type="checkbox" ng-model="isChecked4">
+          <input type="checkbox" ng-model="isChecked4" ng-disabled="{{printer.otherStatus}}===false">
         </label><br/>
       </li>
 

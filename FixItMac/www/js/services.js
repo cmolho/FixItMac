@@ -15,10 +15,10 @@ angular.module('starter.services', [])
     location: "Dupre Hall 253",
     locationCategory: 0,
     inkStatus: true,
-    paperStatus: true,
+    paperStatus: false,
     jamStatus: true,
-    otherStatus: true,
-    status: false
+    otherStatus: false,
+    status: true
   }, {
     id: 1,
     name: "Neil Hall",
