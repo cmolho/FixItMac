@@ -5,7 +5,8 @@
 /*
 Printers four properties: id, name, location, status (true if working/false if not working)
  */
-angular.module('starter.services', [])
+
+angular.module('starter.services', ['ngResource'])
 
 
 .factory('Printers', function() {
@@ -85,6 +86,26 @@ angular.module('starter.services', [])
     }
   };
 })
+
+// TODO Server Stuff
+//.factory('Printers', function($resource){
+//  //var Printerresource = $resource('http://localhost:8080/api/printers');
+//  return $resource('http://localhost:8080/api/printers');
+//
+//  //return {
+//  //  all: function() {
+//  //    return printers;
+//  //  },
+//  //  get: function(printerID) {
+//  //    for (var i = 0; i < printers.length; i++) {
+//  //      if (printers[i].id === parseInt(printerID)) {
+//  //        return printers[i];
+//  //      }
+//  //    }
+//  //    return null;
+//  //  }
+//  //};
+//})
 
 
 .factory('LocationCategories',function(){

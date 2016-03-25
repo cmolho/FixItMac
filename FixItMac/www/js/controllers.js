@@ -6,6 +6,14 @@ angular.module('starter.controllers', [])
 
 
   .controller('MainCtrl', function($scope, $state, $stateParams, Printers, LocationCategories) {
+    //$scope.printers = Printers.query(); //TODO Server Stuff
+    //$scope.printers.$promise.then(function(data) {
+    //  console.log(data);
+    //});
+    ////Printers.query().$promise.then(function(data) {
+    ////  $scope.printers = data;
+    ////});
+    //console.log($scope.printers);
     $scope.printers = Printers.all();
     $scope.locationCategories = LocationCategories.all();
   })
