@@ -5,16 +5,15 @@
 
     <!--SERVER-BASED CODE-->
     <div class="card">
-      <div class="item item-text-wrap">
-        <p align="right" style="font-size:30px; font-family: 'Helvetica Neue'; color: black" >
+      <div class="item item-icon-left item-text-wrap">
+        <p align="right" style="font-size:30px; padding-bottom: 10px; font-family: 'Helvetica Neue'; color: black" >
           {{printer.printerName}}
-          <img src="img/printer.png"
-               style="width: 100px; height: 100px" align="left">
+          <i class="icon ion-printer" style="font-size: 70px"></i>
+          <!-- <img src="img/printer.png" style="width: 100px; height: 100px" align="left"> -->
         </p>
-        <p style="font-size: 6px">
-        </p>
-        <p align="right" style="font-size: 20px";>
-          no. {{printer.printerID}}
+          <p align="right" style="font-size: 15px">
+
+          {{printer.printerLocation}}
         </p>
       </div>
     </div>
