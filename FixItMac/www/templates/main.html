@@ -2,21 +2,23 @@
   <!--<link rel="stylesheet" type="text/css" href="style.css">-->
   <ion-content >
 
+    <!--SERVER BASED CODE-->
     <div class="list">
       <div class="item item-divider" ng-repeat="locationCategory in locationCategories">
-        {{locationCategory.name}}
+        {{locationCategory.locationCategoryName}}
 
-        <ion-list ng-repeat="printer in printers | orderBy:'name'" ng-if="locationCategory.id === printer.locationCategory">
-              <a ng-if="printer.status === false" class="item item-icon-left item-icon-right"   href="#/profile/{{printer.id}}" >
-                <i class="icon ion-printer" ></i>
-                {{printer.name}}
-                <i class="icon ion-close-circled assertive"></i>
-              </a>
-              <a ng-if="printer.status === true" class="item item-icon-left item-icon-right"  href="#/profile/{{printer.id}}" >
-                <i class="icon ion-printer"></i>
-                {{printer.name}}
-                <i class="icon ion-checkmark-circled balanced"></i>
-              </a>
+        <ion-list ng-repeat="printer in printers | orderBy:'printerName'" ng-if="locationCategory.locationCategoryID === printer.locationCategoryID">
+
+          <a ng-if="printer.printerStatus === 0" class="item item-icon-left item-icon-right" href="#/profile/{{printer.printerID}}">
+            <i class="icon ion-printer" ></i>
+            {{printer.printerName}}
+            <i class="icon ion-close-circled assertive"></i>
+          </a>
+          <a ng-if="printer.printerStatus === 1" class="item item-icon-left item-icon-right"  href="#/profile/{{printer.printerID}}" >
+            <i class="icon ion-printer"></i>
+            {{printer.printerName}}
+            <i class="icon ion-checkmark-circled balanced"></i>
+          </a>
         </ion-list>
 
       </div>
