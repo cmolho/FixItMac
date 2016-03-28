@@ -5,79 +5,79 @@
 /*
 Printers four properties: id, name, location, status (true if working/false if not working)
  */
+angular.module('starter.services', [])
 
-angular.module('starter.services', ['ngResource'])
 
-  .factory('Printers', function() {
-    var printers = [{
-      printerID: 0,
-      printerName: "Dupre",
-      printerLocation: "Dupre Hall 253",
-      locationCategoryID: 0,
-      inkStatus: true,
-      paperStatus: false,
-      jamStatus: true,
-      otherStatus: false,
-      printerStatus: 0
-    }, {
-      printerID: 1,
-      printerName: "Neil Hall",
-      printerLocation: "Neil Hall 015",
-      locationCategoryID: 3,
-      inkStatus: true,
-      paperStatus: true,
-      jamStatus: true,
-      otherStatus: true,
-      printerStatus: 1
-    }, {
-      printerID: 2,
-      printerName: "Campus Center",
-      printerLocation: "Campus Center 2nd Floor",
-      locationCategoryID: 1,
-      inkStatus: true,
-      paperStatus: true,
-      jamStatus: true,
-      otherStatus: true,
-      printerStatus: 1
-    },{
-      printerID: 3,
-      printerName: "Kirk 1",
-      printerLocation: "Kirk Hall 012",
-      locationCategoryID: 0,
-      inkStatus: true,
-      paperStatus: true,
-      jamStatus: true,
-      otherStatus: true,
-      printerStatus: 1
-    }, {
-      printerID: 4,
-      printerName: "Kirk 2",
-      printerLocation: "Kirk Hall 012",
-      locationCategoryID: 0,
-      inkStatus: true,
-      paperStatus: false,
-      jamStatus: true,
-      otherStatus: true,
-      printerStatus: 0
-    }, {
-      printerID: 5,
-      printerName: "Doty",
-      printerLocation: "Doty Hall 004",
-      locationCategoryID: 0,
-      inkStatus: true,
-      paperStatus: true,
-      jamStatus: true,
-      otherStatus: false,
-      printerStatus: 0
+.factory('Printers', function() {
+  var printers = [{
+    id: 0,
+    name: "Dupre",
+    location: "Dupre Hall 253",
+    locationCategory: 0,
+    inkStatus: true,
+    paperStatus: false,
+    jamStatus: true,
+    otherStatus: false,
+    status: false
+  }, {
+    id: 1,
+    name: "Neil Hall",
+    location: "Neil Hall 015",
+    locationCategory: 3,
+    inkStatus: true,
+    paperStatus: true,
+    jamStatus: true,
+    otherStatus: true,
+    status: true
+  }, {
+    id: 2,
+    name: "Campus Center",
+    location: "Campus Center 2nd Floor",
+    locationCategory: 1,
+    inkStatus: true,
+    paperStatus: true,
+    jamStatus: true,
+    otherStatus: true,
+    status: true
+  },{
+    id: 3,
+    name: "Kirk 1",
+    location: "Kirk Hall 012",
+    locationCategory: 0,
+    inkStatus: true,
+    paperStatus: true,
+    jamStatus: true,
+    otherStatus: true,
+    status: true
+  }, {
+    id: 4,
+    name: "Kirk 2",
+    location: "Kirk Hall 012",
+    locationCategory: 0,
+    inkStatus: true,
+    paperStatus: true,
+    jamStatus: true,
+    otherStatus: true,
+    status: true
+  }, {
+    id: 5,
+    name: "Doty",
+    location: "Doty Hall 004",
+    locationCategory: 0,
+    inkStatus: true,
+    paperStatus: true,
+    jamStatus: true,
+    otherStatus: false,
+    status: false
   }];
 
   return {
     all: function() {
       return printers;
     },
-    get: function(id) {
+    get: function(printerID) {
       for (var i = 0; i < printers.length; i++) {
-        if (printers[i].printerID === parseInt(id)) {
+        if (printers[i].id === parseInt(printerID)) {
           return printers[i];
         }
       }
@@ -86,19 +86,20 @@ angular.module('starter.services', ['ngResource'])
   };
 })
 
+
 .factory('LocationCategories',function(){
   var locationCategories=[{
-    locationCategoryID:0,
-    locationCategoryName:"Dorms"
+    id:0,
+    name:"Dorms"
   },{
-    locationCategoryID:1,
-    locationCategoryName:"Public Spaces"
+    id:1,
+    name:"Public Spaces"
   },{
-    locationCategoryID:2,
-    locationCategoryName:"Olin Rice"
+    id:2,
+    name:"Olin Rice"
   },{
-    locationCategoryID:3,
-    locationCategoryName:"Neil Hall"
+    id:3,
+    name:"Neil Hall"
   }];
 
   return {
@@ -114,21 +115,4 @@ angular.module('starter.services', ['ngResource'])
       return null;
     }
 }
-})
-
-
-
-//// TODO Server Code
-//
-//.factory('Printers', function($resource){
-//  return $resource('http://localhost:8080/api/printers/:id',
-//    {id:'@id'},
-//    {'get':    {method:'GET', isArray:false}}
-//  );
-//})
-//
-//
-//.factory('LocationCategories',function($resource){
-//  return $resource('http://localhost:8080/api/locations');
-//})
-;
+});
