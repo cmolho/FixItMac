@@ -21,7 +21,7 @@ angular.module('starter.services', ['ngResource'])
       printerStatus: 0
     }, {
       printerID: 1,
-      printerName: "Neil Hall",
+      printerName: "Luke",
       printerLocation: "Neil Hall 015",
       locationCategoryID: 3,
       inkStatus: true,
@@ -31,7 +31,7 @@ angular.module('starter.services', ['ngResource'])
       printerStatus: 1
     }, {
       printerID: 2,
-      printerName: "Campus Center",
+      printerName: "SORC",
       printerLocation: "Campus Center 2nd Floor",
       locationCategoryID: 1,
       inkStatus: true,
@@ -117,18 +117,19 @@ angular.module('starter.services', ['ngResource'])
 })
 
 
-
+/*
 //// TODO Server Code
-//
-//.factory('Printers', function($resource){
-//  return $resource('http://localhost:8080/api/printers/:id',
-//    {id:'@id'},
-//    {'get':    {method:'GET', isArray:false}}
-//  );
-//})
-//
-//
-//.factory('LocationCategories',function($resource){
-//  return $resource('http://localhost:8080/api/locations');
-//})
+
+.factory('Printers', function($resource){
+  return $resource('http://localhost:8080/api/printers/:id',
+    {id:'@id'},
+    {'get':    {method:'GET', isArray:false}}
+  );
+})
+
+
+.factory('LocationCategories',function($resource){
+  return $resource('http://localhost:8080/api/locations');
+})
+*/
 ;
