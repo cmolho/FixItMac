@@ -6,11 +6,11 @@ angular.module('starter.controllers', [])
 
 
   .controller('MainCtrl', function($scope, $state, $stateParams, Printers, LocationCategories) {
-    /*
+
     //TODO SERVER-BASED CODE
     Printers.query().$promise.then(function(data) {
-        console.log($scope);
-        $scope.printers = data;
+      console.log($scope);
+      $scope.printers = data;
     });
     console.log($scope.printers);
 
@@ -19,25 +19,25 @@ angular.module('starter.controllers', [])
       $scope.locationCategories = data;
     });
     console.log($scope.locationCategories);
-    */
-    //OLD CODE
-    $scope.printers = Printers.all(); //Old test data
-    $scope.locationCategories = LocationCategories.all();
+
+    ////OLD CODE
+    //$scope.printers = Printers.all(); //Old test data
+    //$scope.locationCategories = LocationCategories.all();
 
   })
 
-  .controller('ProfileCtrl', function($scope, $stateParams, Printers, $ionicPopup) {
-    /*
+  .controller('ProfileCtrl', function($scope, $stateParams, Printers, $ionicPopup, Email) {
+
     //TODO SERVER-BASED CODE
     Printers.get({id:$stateParams.id}).$promise.then(function(data) {
       console.log($scope);
       $scope.printer = data;
     });
     console.log($scope.printer);
-    */
 
-    //OLD CODE
-    $scope.printer = Printers.get($stateParams.id);
+
+    ////OLD CODE
+    //$scope.printer = Printers.get($stateParams.id);
 
     $scope.showConfirm = function() {
       var confirmPopup = $ionicPopup.confirm({
@@ -49,10 +49,11 @@ angular.module('starter.controllers', [])
 
       confirmPopup.then(function(result) {
         if(result) {
+          Email.save();
           document.location.href = "#/reward/";
         }
       });
-      };
+    };
 
   })
   .controller('RewardCtrl', function($scope, $state, $stateParams) {});
