@@ -4,7 +4,7 @@
 
     <!--SERVER BASED CODE-->
     <div class="list">
-      <div class="item item-divider" ng-repeat="locationCategory in locationCategories">
+      <div class="item item-divider" ng-repeat="locationCategory in locationCategories | orderBy:'locationCategoryName'">
         {{locationCategory.locationCategoryName}}
 
         <ion-list ng-repeat="printer in printers | orderBy:'printerName'" ng-if="locationCategory.locationCategoryID === printer.locationCategoryID">
