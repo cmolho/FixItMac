@@ -3,7 +3,6 @@
 <ion-view view-title="{{printer.printerName}}">
   <ion-content>
 
-    <!--SERVER-BASED CODE-->
     <div class="card">
       <div class="item item-icon-left item-text-wrap">
         <p align="right" style="font-size:30px; padding-bottom: 10px; font-family: 'Helvetica Neue'; color: black" >
@@ -11,8 +10,7 @@
           <!--<i class="icon ion-printer" style="font-size: 70px"></i>-->
            <img src="img/printer.png" style="width: 100px; height: 100px" align="left">
         </p>
-          <p align="right" style="font-size: 15px">
-
+        <p align="right" style="font-size: 15px">
           {{printer.printerLocation}}
         </p>
       </div>
@@ -29,34 +27,34 @@
 
       <li class="item item-checkbox">
         Out of Paper
-        <a ng-if="printer.paperStatus === false"><span class="badge badge-assertive">Reported</span></a>
+        <a ng-if="status.paperStatus === 0"><span class="badge badge-assertive">Reported</span></a>
         <label class="checkbox">
-          <input type="checkbox" ng-model="isChecked1" ng-disabled="{{printer.paperStatus}}===false">
+          <input type="checkbox" ng-model="isChecked1" ng-disabled="status.paperStatus===0">
         </label><br/>
 
       </li>
 
       <li class="item item-checkbox">
         Out of Ink
-        <a ng-if="printer.inkStatus === false"><span class="badge badge-assertive">Reported</span></a>
+        <a ng-if="status.inkStatus === 0"><span class="badge badge-assertive">Reported</span></a>
         <label class="checkbox">
-          <input type="checkbox" ng-model="isChecked2" ng-disabled="{{printer.inkStatus}}===false">
+          <input type="checkbox" ng-model="isChecked2" ng-disabled="status.inkStatus===0">
         </label><br/>
       </li>
 
       <li class="item item-checkbox">
         Paper Jammed
-        <a ng-if="printer.jamStatus === false"><span class="badge badge-assertive">Reported</span></a>
+        <a ng-if="status.jamStatus === 0"><span class="badge badge-assertive">Reported</span></a>
         <label class="checkbox">
-          <input type="checkbox" ng-model="isChecked3" ng-disabled="{{printer.jamStatus}}===false">
+          <input type="checkbox" ng-model="isChecked3" ng-disabled="status.jamStatus===0">
         </label><br/>
       </li>
 
       <li class="item item-checkbox">
         Other
-        <a ng-if="printer.otherStatus === false"><span class="badge badge-assertive">Reported</span></a>
+        <a ng-if="status.otherStatus === 0"><span class="badge badge-assertive">Reported</span></a>
         <label class="checkbox">
-          <input type="checkbox" ng-model="isChecked4" ng-disabled="{{printer.otherStatus}}===false">
+          <input type="checkbox" ng-model="isChecked4" ng-disabled="status.otherStatus===0">
         </label><br/>
       </li>
 
@@ -64,6 +62,5 @@
 
   </ion-content>
 </ion-view>
-
 
 
