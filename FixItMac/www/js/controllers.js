@@ -24,7 +24,7 @@ angular.module('starter.controllers', [])
     //$scope.locationCategories = LocationCategories.all();
   })
 
-  .controller('ProfileCtrl', function($scope, $stateParams, $ionicPopup, Printers, Status) {
+  .controller('ProfileCtrl', function($scope, $stateParams, $ionicPopup, Printers, Status, SetIssue) {
     //TODO SERVER-BASED CODE
     Printers.get({id:$stateParams.id}).$promise.then(function(data) {
       console.log($scope);
@@ -42,7 +42,7 @@ angular.module('starter.controllers', [])
     //$scope.printer = Printers.get($stateParams.id);
     //$scope.status = Status.get($stateParams.id);
 
-    $scope.showConfirm = function() {
+    $scope.showConfirm = function(paper, ink, jam, other) {
       var confirmPopup = $ionicPopup.confirm({
         title: 'Are you sure?',
         template: 'An automatic email will be generated to ITS if you report.',
@@ -52,7 +52,11 @@ angular.module('starter.controllers', [])
 
       confirmPopup.then(function(result) {
         if(result) {
-          Email.save();
+          //Email.save();
+          if (paper) {SetIssue.post({id:$stateParams.id,issue:"paperStatus"});}
+          if (ink) {SetIssue.post({id:$stateParams.id,issue:"inkStatus"});}
+          if (jam) {SetIssue.post({id:$stateParams.id,issue:"jamStatus"});}
+          if (other) {SetIssue.post({id:$stateParams.id,issue:"otherStatus"});}
           document.location.href = "#/reward/";
         }
       });

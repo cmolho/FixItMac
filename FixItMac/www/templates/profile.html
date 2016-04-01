@@ -19,7 +19,7 @@
     <!--Report Button-->
     <div>
       <input type="submit" value="Report"
-             ng-disabled ="!isChecked1 && !isChecked2 && !isChecked3 && !isChecked4" class="button button-block button-assertive button-primary" ng-click="showConfirm()">
+             ng-disabled ="!paperChecked && !inkChecked && !jamChecked && !otherChecked" class="button button-block button-assertive button-primary" ng-click="showConfirm(paperChecked, inkChecked, jamChecked, otherChecked)">
     </div>
 
     <!--Checkboxes-->
@@ -29,7 +29,7 @@
         Out of Paper
         <a ng-if="status.paperStatus === 0"><span class="badge badge-assertive">Reported</span></a>
         <label class="checkbox">
-          <input type="checkbox" ng-model="isChecked1" ng-disabled="status.paperStatus===0">
+          <input type="checkbox" ng-model="paperChecked" ng-disabled="status.paperStatus===0">
         </label><br/>
 
       </li>
@@ -38,7 +38,7 @@
         Out of Ink
         <a ng-if="status.inkStatus === 0"><span class="badge badge-assertive">Reported</span></a>
         <label class="checkbox">
-          <input type="checkbox" ng-model="isChecked2" ng-disabled="status.inkStatus===0">
+          <input type="checkbox" ng-model="inkChecked" ng-disabled="status.inkStatus===0">
         </label><br/>
       </li>
 
@@ -46,7 +46,7 @@
         Paper Jammed
         <a ng-if="status.jamStatus === 0"><span class="badge badge-assertive">Reported</span></a>
         <label class="checkbox">
-          <input type="checkbox" ng-model="isChecked3" ng-disabled="status.jamStatus===0">
+          <input type="checkbox" ng-model="jamChecked" ng-disabled="status.jamStatus===0">
         </label><br/>
       </li>
 
@@ -54,7 +54,7 @@
         Other
         <a ng-if="status.otherStatus === 0"><span class="badge badge-assertive">Reported</span></a>
         <label class="checkbox">
-          <input type="checkbox" ng-model="isChecked4" ng-disabled="status.otherStatus===0">
+          <input type="checkbox" ng-model="otherChecked" ng-disabled="status.otherStatus===0">
         </label><br/>
       </li>
 
