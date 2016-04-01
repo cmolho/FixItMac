@@ -52,7 +52,7 @@ angular.module('starter.controllers', [])
 
       confirmPopup.then(function(result) {
         if(result) {
-          Email.save();
+          //Email.save();
           document.location.href = "#/reward/";
         }
       });
