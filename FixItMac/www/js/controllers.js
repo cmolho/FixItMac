@@ -57,6 +57,7 @@ angular.module('starter.controllers', [])
           if (ink) {SetIssue.post({id:$stateParams.id,issue:"inkStatus"});}
           if (jam) {SetIssue.post({id:$stateParams.id,issue:"jamStatus"});}
           if (other) {SetIssue.post({id:$stateParams.id,issue:"otherStatus"});}
+          //Email.save();
           document.location.href = "#/reward/";
         }
       });
