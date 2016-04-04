@@ -43,7 +43,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         url:'/reward/',
         templateUrl: 'templates/reward.html',
         controller: 'RewardCtrl'
+      })
 
+      .state('info', {
+        url: '/info/',
+        templateUrl: 'templates/info.html',
+        controller: 'InfoCtrl'
       });
 
     $urlRouterProvider.otherwise('/main');

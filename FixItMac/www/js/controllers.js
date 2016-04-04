@@ -59,4 +59,5 @@ angular.module('starter.controllers', [])
     };
   })
 
-  .controller('RewardCtrl', function($scope, $state, $stateParams) {});
+  .controller('RewardCtrl', function($scope, $state, $stateParams) {})
+  .controller('InfoCtrl', function($scope, $state, $stateParams) {});
