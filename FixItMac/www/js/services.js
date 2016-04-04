@@ -137,6 +137,13 @@ angular.module('starter.services', ['ngResource'])
   return $resource('http://localhost:8080/api/locations');
 })
 
+.factory('SetIssue',function($resource){
+  return $resource('http://localhost:8080/api/printers/:id/setissue/:issue',
+    {id:'@id', issue: '@issue'},
+    {post:    {method:'POST'}}
+  );
+})
+
 .factory('Email',function($resource){
   return $resource('http://localhost:8080/api/email');
 })
