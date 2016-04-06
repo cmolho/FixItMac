@@ -51,13 +51,19 @@
       </li>
 
       <li class="item item-checkbox">
-        Other
+        <ion-item>
+          <span class="input-label">Other</span>
+          <input type="text">
+        </ion-item>
+
+
+
+        <!-- reported -->
         <a ng-if="status.otherStatus === 0"><span class="badge badge-assertive">Reported</span></a>
         <label class="checkbox">
           <input type="checkbox" ng-model="otherChecked" ng-disabled="status.otherStatus===0">
         </label><br/>
       </li>
-
     </ul>
 
   </ion-content>
