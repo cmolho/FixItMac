@@ -51,12 +51,30 @@ angular.module('starter.controllers', [])
       });
 
       confirmPopup.then(function(result) {
+
         if(result) {
-          if (paper) {SetIssue.post({id:$stateParams.id,issue:"paperStatus"});}
-          if (ink) {SetIssue.post({id:$stateParams.id,issue:"inkStatus"});}
-          if (jam) {SetIssue.post({id:$stateParams.id,issue:"jamStatus"});}
-          if (other) {SetIssue.post({id:$stateParams.id,issue:"otherStatus"});}
-          Email.save();
+          var emailText = "The following printer issue has been reported to FixItMac:\n"
+            +"\nLocation: " + $scope.printer.printerLocation
+            +"\nPrinter Name: " + $scope.printer.printerName
+            +"\nProblem(s): \n";
+          if (paper) {
+            SetIssue.post({id:$stateParams.id,issue:"paperStatus"});
+            emailText = emailText + "\tOut Of Paper\n";
+          }
+          if (ink) {
+            SetIssue.post({id:$stateParams.id,issue:"inkStatus"});
+            emailText = emailText + "\tOut Of Ink\n"
+          }
+          if (jam) {
+            SetIssue.post({id:$stateParams.id,issue:"jamStatus"});
+            emailText = emailText + "\tPaper Jam\n"
+          }
+          if (other) {
+            SetIssue.post({id:$stateParams.id,issue:"otherStatus"});
+            emailText = emailText + "\tOther Issue\n"
+          }
+          emailText = emailText + "\nPlease click the link below when the problem is fixed:\n\tLINK\n\nThank you!\n\nBest,\nFixItMac";
+          Email.send({text:emailText});
           document.location.href = "#/reward/";
         }
       });

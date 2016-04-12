@@ -145,6 +145,8 @@ angular.module('starter.services', ['ngResource'])
 })
 
 .factory('Email',function($resource){
-  return $resource('http://localhost:8080/api/email');
+  return $resource('http://localhost:8080/api/email/:text',
+    {text:'@text'},
+    {send:    {method:'POST'}});
 })
 ;
