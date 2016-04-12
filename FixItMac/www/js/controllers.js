@@ -51,7 +51,6 @@ angular.module('starter.controllers', [])
       });
 
       confirmPopup.then(function(result) {
-
         if(result) {
           var emailText = "The following printer issue has been reported to FixItMac:\n"
             +"\nLocation: " + $scope.printer.printerLocation
