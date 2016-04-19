@@ -6,30 +6,41 @@ angular.module('starter.controllers', [])
 
   .controller('MainCtrl', function($scope, $state, $stateParams, Printers, LocationCategories) {
     Printers.query().$promise.then(function(data) {
-        console.log($scope);
         $scope.printers = data;
     });
-    console.log($scope.printers);
+    //console.log($scope.printers); //debugging
 
     LocationCategories.query().$promise.then(function(data) {
-      console.log($scope);
       $scope.locationCategories = data;
     });
-    console.log($scope.locationCategories);
+    //console.log($scope.locationCategories); //debugging
+
+    //Spinning refresh pull down
+    $scope.doRefresh = function() {
+      Printers.query().$promise.then(function(data) {
+        $scope.printers = data;
+      });
+
+      LocationCategories.query().$promise.then(function(data) {
+        $scope.locationCategories = data;
+      });
+
+      $scope.$broadcast('scroll.refreshComplete');
+    }
   })
 
   .controller('ProfileCtrl', function($scope, $stateParams, $ionicPopup, Printers, Status, SetIssue, Email) {
     Printers.get({id:$stateParams.id}).$promise.then(function(data) {
-      console.log($scope);
+      //console.log($scope);
       $scope.printer = data;
     });
-    console.log($scope.printer);
+    //console.log($scope.printer); //debugging
 
     Status.get({id:$stateParams.id}).$promise.then(function(data) {
-      console.log($scope);
+      //console.log($scope);
       $scope.status = data;
     });
-    console.log($scope.status);
+    //console.log($scope.status);
 
     $scope.showConfirm = function(paper, ink, jam, other) {
       var confirmPopup = $ionicPopup.confirm({
@@ -41,6 +52,7 @@ angular.module('starter.controllers', [])
 
       confirmPopup.then(function(result) {
         if(result) {
+          var link = "http://fixitmac.herokuapp.com/printers/"+$scope.printer.printerID+"/setworking";
           var emailText = "The following printer issue has been reported to FixItMac:\n"
             +"\nLocation: " + $scope.printer.printerLocation
             +"\nPrinter Name: " + $scope.printer.printerName
@@ -61,8 +73,9 @@ angular.module('starter.controllers', [])
             SetIssue.post({id:$stateParams.id,issue:"otherStatus"});
             emailText = emailText + "\tOther Issue\n"
           }
-          emailText = emailText + "\nPlease click the link below when the problem is fixed:\n\tLINK\n\nThank you!\n\nBest,\nFixItMac";
-          //Email.send({text:emailText}); ///TODO uncomment to send email
+          emailText = emailText + "\nPlease click the link below when the problem is fixed:\n\t"
+            + link + "\n\nThank you!\n\nBest,\nFixItMac";
+          Email.send({text:emailText}); ///TODO uncomment to send email
           document.location.href = "#/reward/";
         }
       });
