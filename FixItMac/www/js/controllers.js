@@ -6,8 +6,8 @@ angular.module('starter.controllers', [])
 
   .controller('MainCtrl', function($scope, $state, $stateParams, Printers, LocationCategories) {
     Printers.query().$promise.then(function(data) {
-        console.log($scope);
-        $scope.printers = data;
+      console.log($scope);
+      $scope.printers = data;
     });
     console.log($scope.printers);
 
@@ -38,7 +38,7 @@ angular.module('starter.controllers', [])
         cancelText:'Cancel',
         okText: 'Yes'
       });
-
+      //User confirms they want to report issue. Email generated and then user redirected to random reward page
       confirmPopup.then(function(result) {
         if(result) {
           var emailText = "The following printer issue has been reported to FixItMac:\n"
@@ -63,7 +63,17 @@ angular.module('starter.controllers', [])
           }
           emailText = emailText + "\nPlease click the link below when the problem is fixed:\n\tLINK\n\nThank you!\n\nBest,\nFixItMac";
           //Email.send({text:emailText}); ///TODO uncomment to send email
-          document.location.href = "#/reward/";
+
+          //Sends the user to a random rewards page
+          numbs = [1,2];
+          //var rand = numbs[Math.floor(Math.random() * numbs.length)];
+          var rand = 2;  //TODO: use this to test out rewards pages you make
+          if (rand === 1) {
+            document.location.href = "#/rewardDog/";
+          }
+          else if (rand === 2) {
+            document.location.href = "#/rewardCat/";
+          }
         }
       });
     };

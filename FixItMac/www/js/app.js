@@ -41,9 +41,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         cache: false
       })
 
-      .state('reward', {
-        url:'/reward/',
-        templateUrl: 'templates/reward.html',
+      .state('rewardDog', {
+        url:'/rewardDog/',
+        templateUrl: 'templates/rewardDog.html',
+        controller: 'RewardCtrl'
+      })
+
+      .state('rewardCat', {
+        url:'/rewardCat/',
+        templateUrl: 'templates/rewardCat.html',
         controller: 'RewardCtrl'
       })
 
