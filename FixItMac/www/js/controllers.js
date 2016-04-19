@@ -53,7 +53,6 @@ angular.module('starter.controllers', [])
       //User confirms they want to report issue. Email generated and then user redirected to random reward page
       confirmPopup.then(function(result) {
         if(result) {
-          var link = "http://fixitmac.herokuapp.com/printers/"+$scope.printer.printerID+"/setworking";
           var emailText = "The following printer issue has been reported to FixItMac:\n"
             +"\nLocation: " + $scope.printer.printerLocation
             +"\nPrinter Name: " + $scope.printer.printerName
@@ -74,10 +73,9 @@ angular.module('starter.controllers', [])
             SetIssue.post({id:$stateParams.id,issue:"otherStatus"});
             emailText = emailText + "\tOther Issue\n"
           }
+          var link = "http://fixitmac.herokuapp.com/printers/"+$scope.printer.printerID+"/setworking";
           emailText = emailText + "\nPlease click the link below when the problem is fixed:\n\t"
             + link + "\n\nThank you!\n\nBest,\nFixItMac";
-          //Email.send({text:emailText}); ///TODO uncomment to send email
-          emailText = emailText + "\nPlease click the link below when the problem is fixed:\n\tLINK\n\nThank you!\n\nBest,\nFixItMac";
           //Email.send({text:emailText}); ///TODO uncomment to send email
 
           //Sends the user to a random rewards page
