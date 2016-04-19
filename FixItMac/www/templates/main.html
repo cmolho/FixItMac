@@ -9,9 +9,11 @@
     <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()"></ion-refresher>
 
     <div class="list">
+      <!--Makes a divider for each category-->
       <div class="item item-divider" ng-repeat="locationCategory in locationCategories | orderBy:'locationCategoryName'">
         {{locationCategory.locationCategoryName}}
 
+        <!--Puts each printer in the proper location category-->
         <ion-list ng-repeat="printer in printers | orderBy:'printerName'" ng-if="locationCategory.locationCategoryID === printer.locationCategoryID">
 
           <a ng-if="printer.printerStatus === 0" class="item item-icon-left item-icon-right" href="#/profile/{{printer.printerID}}">
