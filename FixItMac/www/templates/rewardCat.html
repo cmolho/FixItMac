@@ -2,7 +2,6 @@
 
 <ion-view view-title="Thank you!">
   <ion-nav-buttons side="left" ng-show="false">
-    <a class="button icon-left ion-ios-home" nav-direction="back" ui-sref="main"></a>
   </ion-nav-buttons>
   <link rel="stylesheet" type="text/css" href="style.css"/>
   <ion-content>
@@ -17,8 +16,11 @@
         </div>
       </div>
     </div>
-    <ion-footer-bar align-title="left" class="bar-stable">
-      <a class="button icon-right ion-ios-home" nav-direction="back" ui-sref="main"></a>
-    </ion-footer-bar>
-  </ion-content>
+    </ion-content>
+  <ion-footer-bar class="bar-stable">
+    <div class="col col-33 col-offset-33">
+      <a class="button icon-left ion-ios-home" nav-direction="back" ui-sref="main">Home</a>
+    </div>
+  </ion-footer-bar>
+
 
