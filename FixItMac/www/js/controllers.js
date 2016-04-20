@@ -6,7 +6,7 @@ angular.module('starter.controllers', [])
 
   .controller('MainCtrl', function($scope, $state, $stateParams, Printers, LocationCategories) {
     Printers.query().$promise.then(function(data) {
-        $scope.printers = data;
+      $scope.printers = data;
     });
     //console.log($scope.printers); //debugging
 
@@ -77,34 +77,45 @@ angular.module('starter.controllers', [])
           emailText = emailText + "\nPlease click the link below when the problem is fixed:\n\t"
             + link + "\n\nThank you!\n\nBest,\nFixItMac";
           //Email.send({text:emailText}); ///TODO uncomment to send email
-
-          //Sends the user to a random rewards page
-          numbs = [1,6];
-          var rand = numbs[Math.floor(Math.random() * numbs.length)];
-          //var rand = 2;  //TODO: use this to test out rewards pages you make
-          if (rand === 1) {
-            document.location.href = "#/rewardDog/";
-          }
-          else if (rand === 2) {
-            document.location.href = "#/rewardCat/";
-          }
-          else if (rand === 3) {
-            document.location.href = "#/rewardSquirrel/";
-          }
-          else if (rand === 4) {
-            document.location.href = "#/rewardPrinterJoke/";
-          }
-          else if (rand === 5) {
-            document.location.href = "#/rewardCopierJoke/";
-          }
-          else if (rand === 6) {
-            document.location.href = "#/rewardTonerJoke/";
-          }
+          document.location.href= "#/reward/";
         }
       });
     };
   })
 
-  .controller('RewardCtrl', function($scope, $state, $stateParams) {})
+  .controller('RewardCtrl', function($scope, $state, $stateParams) {
+
+
+
+    //Sends the user to a random rewards page
+    numbs = [1, 2, 3, 4, 5, 6];
+    var rand = numbs[Math.floor(Math.random() * numbs.length)];
+    if (rand === 1) {
+      //$scope.reward = "img/cat.jpg";
+
+      $scope.textToShow = "Here is a picture of a kitty for reporting the issue.";
+    }
+    else if (rand === 2) {
+      $scope.reward = 'img/printerJoke.jpg';
+      $scope.textToShow = "Please enjoy this joke as our thanks for reporting the issue!";
+    }
+    else if (rand === 3) {
+      $scope.reward = 'img/copierJoke.jpeg';
+      $scope.textToShow = "Please enjoy this joke as our thanks for reporting the issue!";
+    }
+    else if (rand === 4) {
+      $scope.reward = 'img/puppy.png';
+      $scope.textToShow = "Here is a picture of a puppy for reporting the issue.";
+    }
+    else if (rand === 5) {
+      $scope.reward = 'img/squirrel.jpg';
+      $scope.textToShow = "Here is a picture of a mischievous squirrel for reporting the issue!";
+    }
+    else {
+      $scope.reward = 'img/tonerJoke.jpg';
+      $scope.textToShow = "Please enjoy this joke as our thanks for reporting the issue!";
+    }
+
+  })
   .controller('InfoCtrl', function($scope, $state, $stateParams) {})
 ;
