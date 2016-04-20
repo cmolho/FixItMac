@@ -79,14 +79,20 @@ angular.module('starter.controllers', [])
           //Email.send({text:emailText}); ///TODO uncomment to send email
 
           //Sends the user to a random rewards page
-          numbs = [1,2];
-          //var rand = numbs[Math.floor(Math.random() * numbs.length)];
-          var rand = 2;  //TODO: use this to test out rewards pages you make
+          numbs = [1,4];
+          var rand = numbs[Math.floor(Math.random() * numbs.length)];
+          //var rand = 2;  //TODO: use this to test out rewards pages you make
           if (rand === 1) {
             document.location.href = "#/rewardDog/";
           }
-          else if (rand === 2) {
+          if (rand === 2) {
             document.location.href = "#/rewardCat/";
+          }
+          if (rand === 3) {
+            document.location.href = "#/cookie1/";
+          }
+          else if (rand === 4) {
+            document.location.href = "#/cookie2";
           }
         }
       });
