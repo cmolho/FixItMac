@@ -53,6 +53,30 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'RewardCtrl'
       })
 
+      .state('rewardSquirrel', {
+        url:'/rewardSquirrel/',
+        templateUrl: 'templates/rewardSquirrel.html',
+        controller: 'RewardCtrl'
+      })
+
+      .state('rewardTonerJoke', {
+        url:'/rewardTonerJoke/',
+        templateUrl: 'templates/rewardTonerJoke.html',
+        controller: 'RewardCtrl'
+      })
+
+      .state('rewardCopierJoke', {
+        url:'/rewardCopierJoke/',
+        templateUrl: 'templates/rewardCopierJoke.html',
+        controller: 'RewardCtrl'
+      })
+
+      .state('rewardPrinterJoke', {
+        url:'/rewardPrinterJoke/',
+        templateUrl: 'templates/rewardPrinterJoke.html',
+        controller: 'RewardCtrl'
+      })
+
       .state('info', {
         url: '/info/',
         templateUrl: 'templates/info.html',
