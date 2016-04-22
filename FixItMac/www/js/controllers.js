@@ -112,11 +112,11 @@ angular.module('starter.controllers', [])
     }
       else if (rand === 6) {
       $scope.rewardImg = 'img/1.jpg';
-      $scope.textToShow = "Here is a fortune cookie for reporting the issue!";
+      $scope.textToShow = "Here is a fortune cookie as our thanks for reporting the issue!";
     }
       else if (rand ===7) {
       $scope.rewardImg = 'img/2.jpg';
-      $scope.textToShow = "Here is a fortune cookie for reporting the issue!";
+      $scope.textToShow = "Here is a fortune cookie as our thanks for reporting the issue!";
     }
     else {
       $scope.rewardImg = 'img/tonerJoke.jpg';
