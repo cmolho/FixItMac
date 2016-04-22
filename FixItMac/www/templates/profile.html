@@ -55,14 +55,14 @@
       </li>
 
       <li class="item item-checkbox">
-        <!-- comment out the following 4 lines out for old version and replace with Other!-->
-        <ion-item>
-          <span class="input-label">Other</span>
-          <input type="text">
-        </ion-item>
+
+        <span class="input-label">Other</span>
+        <label class="item item-input">
+          <input type="text" placeholder="Type your printer issue here">
+        </label>
 
         <a ng-if="status.otherStatus === 0"><span class="badge badge-assertive">Reported</span></a>
-        <label class="checkbox">
+        <label class="checkbox" style="margin-top: -55px">
           <input type="checkbox" ng-model="otherChecked" ng-disabled="status.otherStatus===0">
         </label><br/>
       </li>
