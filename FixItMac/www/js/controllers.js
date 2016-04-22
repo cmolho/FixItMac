@@ -88,7 +88,7 @@ angular.module('starter.controllers', [])
 
 
     //Sends the user to a random rewards page
-    numbs = [1, 2, 3, 4, 5, 6];
+    numbs = [1, 2, 3, 4, 5, 6, 7];
     var rand = numbs[Math.floor(Math.random() * numbs.length)];
     if (rand === 1) {
       $scope.rewardImg = "img/cat.jpg";
@@ -109,6 +109,14 @@ angular.module('starter.controllers', [])
     else if (rand === 5) {
       $scope.rewardImg = 'img/squirrel.jpg';
       $scope.textToShow = "Here is a picture of a mischievous squirrel for reporting the issue!";
+    }
+      else if (rand === 6) {
+      $scope.rewardImg = 'img/1.jpg';
+      $scope.textToShow = "Here is a fortune cookie for reporting the issue!";
+    }
+      else if (rand ===7) {
+      $scope.rewardImg = 'img/2.jpg';
+      $scope.textToShow = "Here is a fortune cookie for reporting the issue!";
     }
     else {
       $scope.rewardImg = 'img/tonerJoke.jpg';
