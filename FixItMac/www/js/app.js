@@ -41,39 +41,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         cache: false
       })
 
-      .state('rewardDog', {
-        url:'/rewardDog/',
-        templateUrl: 'templates/rewardDog.html',
-        controller: 'RewardCtrl'
-      })
-
-      .state('rewardCat', {
-        url:'/rewardCat/',
-        templateUrl: 'templates/rewardCat.html',
-        controller: 'RewardCtrl'
-      })
-
-      .state('rewardSquirrel', {
-        url:'/rewardSquirrel/',
-        templateUrl: 'templates/rewardSquirrel.html',
-        controller: 'RewardCtrl'
-      })
-
-      .state('rewardTonerJoke', {
-        url:'/rewardTonerJoke/',
-        templateUrl: 'templates/rewardTonerJoke.html',
-        controller: 'RewardCtrl'
-      })
-
-      .state('rewardCopierJoke', {
-        url:'/rewardCopierJoke/',
-        templateUrl: 'templates/rewardCopierJoke.html',
-        controller: 'RewardCtrl'
-      })
-
-      .state('rewardPrinterJoke', {
-        url:'/rewardPrinterJoke/',
-        templateUrl: 'templates/rewardPrinterJoke.html',
+      .state('reward', {
+        url:'/reward/',
+        templateUrl: 'templates/reward.html',
         controller: 'RewardCtrl'
       })
 
