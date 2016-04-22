@@ -1,5 +1,3 @@
-<!-- This has an object called reward which contains all the information of the awards for reporting for this page -->
-
 <ion-view view-title="Thank you!">
   <ion-nav-buttons side="left" ng-show="false">
   </ion-nav-buttons>
@@ -8,19 +6,17 @@
     <div class="card">
       <div class="item item-text-wrap">
         <p style="font-size:16px; font-family: 'Helvetica Neue'; color: black" >
-          Here is a picture of a kitty for reporting the issue. </p>
+          {{ textToShow }} </p>
         <p style="font-size: 20px; color: white"> black space </p>
 
         <div class="item item-image">
-          <img src="img/cat.jpg" align="middle">
+          <img  ng-src= {{rewardImg}} align="middle">
         </div>
       </div>
     </div>
-    </ion-content>
+  </ion-content>
   <ion-footer-bar class="bar-stable">
     <div class="col col-33 col-offset-33">
       <a class="button icon-left ion-ios-home" nav-direction="back" ui-sref="main">Home</a>
     </div>
   </ion-footer-bar>
-
-
