@@ -95,7 +95,7 @@ angular.module('starter.controllers', [])
       $scope.textToShow = "Here is a picture of a kitty for reporting the issue.";
     }
     else if (rand === 2) {
-      $scope.rewardImg = 'img/printerJoke.jpg';
+      $scope.rewardImg = 'img/printerJoke.png';
       $scope.textToShow = "Please enjoy this joke as our thanks for reporting the issue!";
     }
     else if (rand === 3) {
