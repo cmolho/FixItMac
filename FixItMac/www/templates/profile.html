@@ -1,6 +1,6 @@
 <!-- This has an object called printer which contains all the information of the printer for this page -->
 
-<ion-view view-title="{{printer.printerName}}">
+<ion-view view-title={{printer.printerName}}>
   <ion-nav-buttons side="left" ng-show="false">
     <a class="button icon-left ion-ios-home" nav-direction="back" ui-sref="main"></a>
   </ion-nav-buttons>
@@ -8,12 +8,9 @@
 
     <div class="card">
       <div class="item item-icon-left item-text-wrap">
-        <p align="right" style="font-size:30px; padding-bottom: 10px; font-family: 'Helvetica Neue'; color: black" >
-          {{printer.printerName}}
           <!--<i class="icon ion-printer" style="font-size: 70px"></i>-->
-           <img src="img/printer.png" style="width: 100px; height: 100px" align="left">
-        </p>
-        <p align="right" style="font-size: 15px">
+           <img src="img/printer.png" style="width: 75px; height: 75px" align="left">
+        <p align="right" style="font-size: 15px;padding-top: 20px">
           {{printer.printerLocation}}
         </p>
       </div>

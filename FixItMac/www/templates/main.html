@@ -11,8 +11,7 @@
     <div class="list">
       <!--Makes a divider for each category-->
       <div class="item item-divider" ng-repeat="locationCategory in locationCategories | orderBy:'locationCategoryName'">
-        {{locationCategory.locationCategoryName}}
-
+        <div style="font-size:20px; padding-bottom: 10px;"><center>{{locationCategory.locationCategoryName}}</center></div>
         <!--Puts each printer in the proper location category-->
         <ion-list ng-repeat="printer in printers | orderBy:'printerName'" ng-if="locationCategory.locationCategoryID === printer.locationCategoryID">
 
