@@ -3,7 +3,7 @@
 <ion-view view-title="">
 
   <ion-nav-buttons side="left" ng-show="false">
-    <a class="button icon-left ion-ios-home" nav-direction="back" ui-sref="main">Home</a>
+    <a class="button icon-left ion-chevron-left button-clear button-dark" ui-sref="main">Back</a>
   </ion-nav-buttons>
   <ion-content>
 
@@ -56,15 +56,13 @@
 
       <li class="item item-checkbox">
         <!-- comment out the following 4 lines out for old version and replace with Other!-->
-
-
-        <span class="input-label">Other</span>
-        <label class="item item-input">
-          <input type="text" placeholder="Type your printer issue here">
-        </label>
+        <ion-item>
+          <span class="input-label">Other</span>
+          <input type="text">
+        </ion-item>
 
         <a ng-if="status.otherStatus === 0"><span class="badge badge-assertive">Reported</span></a>
-        <label class="checkbox" style="margin-top:-55px">
+        <label class="checkbox">
           <input type="checkbox" ng-model="otherChecked" ng-disabled="status.otherStatus===0">
         </label><br/>
       </li>
