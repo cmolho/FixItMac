@@ -91,28 +91,27 @@ angular.module('starter.controllers', [])
     numbs = [1, 2, 3, 4, 5, 6];
     var rand = numbs[Math.floor(Math.random() * numbs.length)];
     if (rand === 1) {
-      //$scope.reward = "img/cat.jpg";
-
+      $scope.rewardImg = "img/cat.jpg";
       $scope.textToShow = "Here is a picture of a kitty for reporting the issue.";
     }
     else if (rand === 2) {
-      $scope.reward = 'img/printerJoke.jpg';
+      $scope.rewardImg = 'img/printerJoke.jpg';
       $scope.textToShow = "Please enjoy this joke as our thanks for reporting the issue!";
     }
     else if (rand === 3) {
-      $scope.reward = 'img/copierJoke.jpeg';
+      $scope.rewardImg = 'img/copierJoke.jpeg';
       $scope.textToShow = "Please enjoy this joke as our thanks for reporting the issue!";
     }
     else if (rand === 4) {
-      $scope.reward = 'img/puppy.png';
+      $scope.rewardImg = 'img/puppy.png';
       $scope.textToShow = "Here is a picture of a puppy for reporting the issue.";
     }
     else if (rand === 5) {
-      $scope.reward = 'img/squirrel.jpg';
+      $scope.rewardImg = 'img/squirrel.jpg';
       $scope.textToShow = "Here is a picture of a mischievous squirrel for reporting the issue!";
     }
     else {
-      $scope.reward = 'img/tonerJoke.jpg';
+      $scope.rewardImg = 'img/tonerJoke.jpg';
       $scope.textToShow = "Please enjoy this joke as our thanks for reporting the issue!";
     }
 
