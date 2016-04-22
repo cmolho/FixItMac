@@ -34,8 +34,8 @@ angular.module('starter.services', ['ngResource'])
   })
 
   .factory('Email',function($resource){
-    return $resource('https://fixitmac.herokuapp.com/email/:text',
-      {text:'@text'},
+    return $resource('https://fixitmac.herokuapp.com/email/:text/:address',
+      {text:'@text', address:'@address'},
       {send:    {method:'GET'}});
   })
 ;
