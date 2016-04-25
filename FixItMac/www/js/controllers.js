@@ -111,15 +111,15 @@ angular.module('starter.controllers', [])
       $scope.textToShow = "Here is a picture of a mischievous squirrel for reporting the issue!";
     }
       else if (rand === 6) {
-      $scope.rewardImg = 'img/1.jpg';
+      $scope.rewardImg = 'img/fortune1.jpg';
       $scope.textToShow = "Here is a fortune cookie as our thanks for reporting the issue!";
     }
       else if (rand === 7) {
-      $scope.rewardImg = 'img/2.jpg';
+      $scope.rewardImg = 'img/fortune2.jpg';
       $scope.textToShow = "Here is a fortune cookie as our thanks for reporting the issue!";
     }
       else if(rand === 8) {
-      $scope.rewardImg = 'img/6.jpg';
+      $scope.rewardImg = 'img/fortune3.jpg';
       $scope.textToShow = "Here is a fortune cookie as our thanks for reporting the issue!";
     }
     else {
