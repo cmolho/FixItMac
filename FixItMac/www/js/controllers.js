@@ -85,47 +85,24 @@ angular.module('starter.controllers', [])
 
   .controller('RewardCtrl', function($scope, $state, $stateParams) {
 
-
-
     //Sends the user to a random rewards page
-    numbs = [1, 2, 3, 4, 5, 6, 7, 8];
+    numbs = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     var rand = numbs[Math.floor(Math.random() * numbs.length)];
-    if (rand === 1) {
-      $scope.rewardImg = "img/cat.jpg";
-      $scope.textToShow = "Here is a picture of a kitty for reporting the issue.";
-    }
-    else if (rand === 2) {
-      $scope.rewardImg = 'img/printerJoke.png';
-      $scope.textToShow = "Please enjoy this joke as our thanks for reporting the issue!";
-    }
-    else if (rand === 3) {
-      $scope.rewardImg = 'img/copierJoke.jpeg';
-      $scope.textToShow = "Please enjoy this joke as our thanks for reporting the issue!";
-    }
-    else if (rand === 4) {
-      $scope.rewardImg = 'img/puppy.png';
-      $scope.textToShow = "Here is a picture of a puppy for reporting the issue.";
-    }
-    else if (rand === 5) {
-      $scope.rewardImg = 'img/squirrel.jpg';
-      $scope.textToShow = "Here is a picture of a mischievous squirrel for reporting the issue!";
-    }
-      else if (rand === 6) {
-      $scope.rewardImg = 'img/fortune1.jpg';
-      $scope.textToShow = "Here is a fortune cookie as our thanks for reporting the issue!";
-    }
-      else if (rand === 7) {
-      $scope.rewardImg = 'img/fortune2.jpg';
-      $scope.textToShow = "Here is a fortune cookie as our thanks for reporting the issue!";
-    }
-      else if(rand === 8) {
-      $scope.rewardImg = 'img/fortune3.jpg';
-      $scope.textToShow = "Here is a fortune cookie as our thanks for reporting the issue!";
-    }
-    else {
-      $scope.rewardImg = 'img/tonerJoke.jpg';
-      $scope.textToShow = "Please enjoy this joke as our thanks for reporting the issue!";
-    }
+
+    var rewardContent = [
+      {"img": "img/cat.jpg", "text":"Here is a picture of a kitty for reporting the issue."},
+      {"img": "img/printerJoke.png", "text":"Please enjoy this joke as our thanks for reporting the issue!"},
+      {"img": "img/copierJoke.jpeg", "text":"Please enjoy this joke as our thanks for reporting the issue!"},
+      {"img": "img/puppy.png", "text":"Here is a picture of a puppy for reporting the issue."},
+      {"img": "img/squirrel.jpg", "text":"Here is a picture of a mischievous squirrel for reporting the issue."},
+      {"img": "img/fortune1.jpg", "text":"Here is a fortune cookie as our thanks for reporting the issue!"},
+      {"img": "img/fortune2.jpg", "text":"Here is a fortune cookie as our thanks for reporting the issue!"},
+      {"img": "img/fortune3.jpg", "text":"Here is a fortune cookie as our thanks for reporting the issue!"},
+      {"img": "img/tonerJoke.jpg", "text":"Please enjoy this joke as our thanks for reporting the issue!"}
+    ];
+
+    $scope.rewardImg = rewardContent[rand]["img"];
+    $scope.textToShow = rewardContent[rand]["text"];
 
   })
   .controller('InfoCtrl', function($scope, $state, $stateParams) {})
