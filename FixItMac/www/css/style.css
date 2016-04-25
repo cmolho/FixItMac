@@ -1,7 +1,7 @@
 /* Empty. Add your own CSS if you like */
 
 .item-image{
-  poηβsition: relative;
+  position: relative;
   width: 80%;
   /*height: 25%;*/
 }
@@ -12,4 +12,9 @@
   resize: horizontal;
   margin-right: 0px;
   margin-left: 0px;
+}
+
+.larger-font {
+  font-size: 40px;
+  margin-left: 20px;
 }

@@ -77,7 +77,7 @@ angular.module('starter.controllers', [])
           var link = "http://fixitmac.herokuapp.com/printers/"+$scope.printer.printerID+"/setworking";
           emailText = emailText + "\nPlease click the link below when the problem is fixed:\n\t"
             + link + "\n\nThank you!\n\nBest,\nFixItMac";
-          Email.send({text:emailText}); ///TODO uncomment to send email
+          //Email.send({text:emailText}); ///TODO uncomment to send email
           document.location.href= "#/reward/";
         }
       });
