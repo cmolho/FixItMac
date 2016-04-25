@@ -18,6 +18,7 @@ TODO: Describe the installation process
 
 ## Deployment
 FixItMac functions on both android and ios smart phones. To install the app on your phone:
+
 1. Create an ionic view account at https://apps.ionic.io/login
 2. Create a template app by clicking the green "New App" button at the top-right-hand-side of the web page
 3. Enter the ionic.project file in FixItMac
@@ -26,6 +27,7 @@ FixItMac functions on both android and ios smart phones. To install the app on y
 6. Install the free Ionic View app on your smart phone and sign in with your account information created in step one
 7. Click on your template app and select sync to latest
 8. Once the app is sync, select view app
+
 You will now be able to view the FixItMac app on your smart phone!
 
 ## Usage
