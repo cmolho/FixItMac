@@ -3,21 +3,20 @@
   </ion-nav-buttons>
   <link rel="stylesheet" type="text/css" href="style.css"/>
   <ion-content>
-    <div class="card">
       <div class="item item-text-wrap">
-        <p style="font-size:16px; font-family: 'Helvetica Neue'; color: black" >
-          {{ textToShow }} </p>
-        <p style="font-size: 20px; color: white"> black space </p>
-
-        <div class="item item-image">
-          <img  ng-src= {{rewardImg}} align="middle">
+        <div class="item item-center-fit" align="middle">
+          <p style="font-size:16px; font-family: 'Helvetica Neue'; color: black" >
+            {{ textToShow }} </p>
+          <p style="font-size: 20px; color: white"> black space </p>
+          <img ng-src= {{rewardImg}} align="middle" style="width: 100%">
         </div>
       </div>
-    </div>
   </ion-content>
   <ion-footer-bar class="bar-stable">
     <div class="col col-33 col-offset-33">
-      <a  class="button icon-left ion-ios-home" nav-direction="back" ui-sref="main">Home</a>
+      <a  class="button icon-left ion-ios-home"
+          nav-direction="back" ui-sref="main"
+          style="margin-left: 20px; font-size:16px">Home</a>
     </div>
   </ion-footer-bar>
 </ion-view>
