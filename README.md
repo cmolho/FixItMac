@@ -48,7 +48,7 @@ FixItMac was created by students at Macalester College throughout their duration
 ## Authors
 Current maintainers:
  * Rae Hohle  - https://github.com/rhohle
- * Minah Kim  - https://github.com/mkim2
+ * Minju Kim  - https://github.com/mkim2
  * Ana Lindholm - https://github.com/amikkels
  * Cody Molho - https://github.com/cmolho
 
