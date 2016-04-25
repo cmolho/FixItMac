@@ -70,13 +70,14 @@ angular.module('starter.controllers', [])
             emailText = emailText + "\tPaper Jam\n"
           }
           if (other) {
+            var input = document.getElementById('filename').value;
             SetIssue.post({id:$stateParams.id,issue:"otherStatus"});
-            emailText = emailText + "\tOther Issue\n"
+            emailText = emailText + input
           }
           var link = "http://fixitmac.herokuapp.com/printers/"+$scope.printer.printerID+"/setworking";
           emailText = emailText + "\nPlease click the link below when the problem is fixed:\n\t"
             + link + "\n\nThank you!\n\nBest,\nFixItMac";
-          //Email.send({text:emailText}); ///TODO uncomment to send email
+          Email.send({text:emailText}); ///TODO uncomment to send email
           document.location.href= "#/reward/";
         }
       });
@@ -103,7 +104,6 @@ angular.module('starter.controllers', [])
 
     $scope.rewardImg = rewardContent[rand]["img"];
     $scope.textToShow = rewardContent[rand]["text"];
-
   })
   .controller('InfoCtrl', function($scope, $state, $stateParams) {})
 ;
