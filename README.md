@@ -1,6 +1,4 @@
-<snippet>
-  <content><![CDATA[
-# ${1:FixItMac!}
+#FixItMac!
 ###Software Development, Spring 2016
 FixItMac is a mobile application that helps students report problems that they are experiencing with a printer on campus in only a few clicks. It also serves to indicate which printers are in working-order and are available for use.
  * For more information, please email fixitmacalester@gmail.com
@@ -28,6 +26,4 @@ Current maintainers:
  * Cody Molho - https://github.com/cmolho
 ## License
 TODO: Write license
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
+
