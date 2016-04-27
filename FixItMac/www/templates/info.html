@@ -1,27 +1,43 @@
 
 <ion-view view-title="Information">
   <ion-nav-buttons side="left" ng-show="false">
-    <a class="button icon-left ion-ios-home" nav-direction="back" ui-sref="main"></a>
   </ion-nav-buttons>
   <ion-content>
     <div class="card">
       <div class="item item-text-wrap">
-        <p style="font-size:20px; font-family: 'Helvetica Neue'; color: black; align: center">
-          Welcome to FixItMac!  </p>
+        <p style="font-size:20px; font-family: 'Helvetica Neue'; color: black" align="center">
+          <img src="img/icon.png" style="width: 50px; height: 50px ; margin-bottom: -15px">
+          Welcome to FixItMac! 
+        </p>
         <p style="color: white">.</p>
-        <p style="color:black"> FixItMac is a mobile application that helps you report printer problems
-          in only a few clicks. On the home page, you will see the list of printers with red and
-          green signs. These reflect the status of the printers. </p>
+        <p style="color:black"> FixItMac is a mobile application that helps students report problems that they are
+          experiencing with a printer on campus in only a few clicks. It also serves to indicate which printers are in working-order
+          and are available for use.
+        </p>
         <p style="color: white">.</p>
-        <p style="color: black"> If they are red, it means the printer is in the process of getting fixed. 
-          If the button is green, it means the printer is working. 
-          When you discover a problem for any of the printers, please click the
-          corresponding printer to report.  An automatic email will be generated to ITS,
-        and the problem will be fixed shortly.</p>
+        <p style="color:black" >
+          On the home page, you will see the list of printers with red and green icons reflecting the status of the printers.
+          If the icons are red, it means the printer in that location is in the process of getting fixed. 
+          If the icon is green, it means that the printer is functioning correctly.  </p>
+        <p style="color: white">.</p>
+        <p style="color: black">
+          When you discover a problem with any of the printers, please click the
+          corresponding printer to report.  This will lead you to the printer's profile page where
+          you may select the specific problem that you are experiencing with the printer. An automatic email will
+          be generated to ITS, and the problem will be fixed shortly!</p>
         <p style="color: white">.</p>
         <p style="color: black">With FixItMac, there are no more printer problems! </p>
+        <p style="color: white">.</p>
+        <p style="font-size:10px; color: dimgray">For more information, please email fixitmacalester@gmail.com </p>
         </div>
       </div>
     </div>
   </ion-content>
+  <ion-footer-bar class="bar-stable">
+    <div class="col col-33 col-offset-33">
+      <button  class="button icon-left ion-ios-home"
+          nav-direction="back" ui-sref="main"
+          style="margin-left: 20px; font-size:16px; font-color:black"> Home </button>
+    </div>
+  </ion-footer-bar>
 </ion-view>

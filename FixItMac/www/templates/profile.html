@@ -1,6 +1,6 @@
 <!-- This has an object called printer which contains all the information of the printer for this page -->
 
-<ion-view view-title="">
+<ion-view view-title="FixItMac">
 
   <ion-nav-buttons side="left" ng-show="false">
     <a class="button icon-left ion-chevron-left button-clear button-dark" ui-sref="main">Back</a>
@@ -58,7 +58,7 @@
 
         <span class="input-label">Other</span>
         <label class="item item-input">
-          <input type="text" placeholder="Type your printer issue here">
+          <input name="filename" type="text" id="filename" placeholder="Type your printer issue here">
         </label>
 
         <a ng-if="status.otherStatus === 0"><span class="badge badge-assertive">Reported</span></a>

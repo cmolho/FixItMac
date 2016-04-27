@@ -5,3 +5,11 @@
   width: 80%;
   /*height: 25%;*/
 }
+
+.item-center-fit {
+  align-items: center;
+  background-size: contain;
+  resize: horizontal;
+  margin-right: 0px;
+  margin-left: 0px;
+}
