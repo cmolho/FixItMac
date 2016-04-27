@@ -70,7 +70,7 @@ angular.module('starter.controllers', [])
             emailText = emailText + "\tPaper Jam\n"
           }
           if (other) {
-            var input = document.getElementById('filename').value;
+            var input = document.getElementById('otherText').value;
             SetIssue.post({id:$stateParams.id,issue:"otherStatus"});
             emailText = emailText + input
           }
