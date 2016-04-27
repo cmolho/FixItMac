@@ -57,28 +57,33 @@ angular.module('starter.controllers', [])
             +"\nLocation: " + $scope.printer.printerLocation
             +"\nPrinter Name: " + $scope.printer.printerName
             +"\nProblem(s): \n";
+          var link = "";
           if (paper) {
             SetIssue.post({id:$stateParams.id,issue:"paperStatus"});
-            emailText = emailText + "\tOut Of Paper\n";
+            emailText = emailText + "    Out Of Paper\n";
+            link = link + "    Paper fixed: http://fixitmac.herokuapp.com/printers/"+$scope.printer.printerID+"/setworking/paperStatus\n";
           }
           if (ink) {
             SetIssue.post({id:$stateParams.id,issue:"inkStatus"});
-            emailText = emailText + "\tOut Of Ink\n"
+            emailText = emailText + "    Out Of Ink\n";
+            link = link + "    Ink fixed: http://fixitmac.herokuapp.com/printers/"+$scope.printer.printerID+"/setworking/inkStatus\n";
           }
           if (jam) {
             SetIssue.post({id:$stateParams.id,issue:"jamStatus"});
-            emailText = emailText + "\tPaper Jam\n"
+            emailText = emailText + "    Paper Jam\n";
+            link = link + "    Jam fixed: http://fixitmac.herokuapp.com/printers/"+$scope.printer.printerID+"/setworking/jamStatus\n";
           }
           if (other) {
             var input = document.getElementById('otherText').value;
             SetIssue.post({id:$stateParams.id,issue:"otherStatus"});
-            emailText = emailText + input
+            emailText = emailText +"    "+input;
+            link = link + "    Other issue ("+input+") fixed: http://fixitmac.herokuapp.com/printers/"+$scope.printer.printerID+"/setworking/otherStatus\n";
           }
-          var link = "http://fixitmac.herokuapp.com/printers/"+$scope.printer.printerID+"/setworking";
-          emailText = emailText + "\nPlease click the link below when the problem is fixed:\n\t"
+          link = link + "\nOr the following link to indicate all problems have been fixed: \n    http://fixitmac.herokuapp.com/printers/"+$scope.printer.printerID+"/setworking";
+          emailText = emailText + "\n\nPlease click the link(s) below when the problem is fixed:\n"
             + link + "\n\nThank you!\n\nBest,\nFixItMac";
-          //var emailAddress = "cmolho@macalester.edu";
-          //Email.send({text:emailText, address:emailAddress}); ///TODO uncomment to send email
+          var emailAddress = "cmolho@macalester.edu";
+          Email.send({text:emailText, address:emailAddress}); ///TODO uncomment to send email
           document.location.href= "#/reward/";
         }
       });

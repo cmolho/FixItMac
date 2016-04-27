@@ -58,7 +58,7 @@
 
         <span class="input-label">Other</span>
         <label class="item item-input">
-          <input name="otherText" type="text" id="otherText" placeholder="Type your printer issue here">
+          <input name="otherText" type="text" id="otherText" placeholder="Type your printer issue here" ng-disabled="status.otherStatus===0">
         </label>
 
         <a ng-if="status.otherStatus === 0"><span class="badge badge-assertive">Reported</span></a>
