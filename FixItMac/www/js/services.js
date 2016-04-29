@@ -3,8 +3,8 @@
  */
 
 /*
-Returns an ngResource for each resource on our server (printers, locations,
-statuses getting and setting, and email sending)
+ Returns an ngResource for each resource on our server (printers, locations,
+ statuses getting and setting, and email sending)
  */
 
 angular.module('starter.services', ['ngResource'])
