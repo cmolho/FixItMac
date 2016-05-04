@@ -83,7 +83,7 @@ angular.module('starter.controllers', [])
           emailText = emailText + "\n\nPlease click the link(s) below when the problem is fixed:\n"
             + link + "\n\nThank you!\n\nBest,\nFixItMac";
           var emailAddress = "cmolho@macalester.edu";
-          //Email.send({text:emailText, address:emailAddress}); ///TODO uncomment to send email
+          Email.send({text:emailText, address:emailAddress}); ///TODO uncomment to send email
           document.location.href= "#/reward/";
         }
       });
