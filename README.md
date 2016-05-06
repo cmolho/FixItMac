@@ -3,7 +3,9 @@
 FixItMac is a mobile application that helps students report problems that they are experiencing with a printer on campus in only a few clicks. It also serves to indicate which printers are in working-order and are available for use.
  * To access the full code of the application, visit the project page:
    https://github.com/cmolho/FixItMac
+ * To access the server code, visit our back-end repository: https://github.com/cmolho/FixItMacServer
  * For more information, please email fixitmacalester@gmail.com
+ 
 
 ## Built With
 * Ionic
@@ -13,11 +15,14 @@ FixItMac is a mobile application that helps students report problems that they a
 * Amazon AWS
 * Heroku
 
-## Installation
-TODO: Describe the installation process
+## Installation and Emulation
+1. Install Node and the Ionic Framework/CLI (follow Step 1 at http://ionicframework.com/getting-started/)
+2. Navigate into the FixItMac folder from command line and run `ionic emulate ios` to build and open in an iPhone emulator, or `ionic serve` to open in a web browser. You can also use `ionic emulate android`, but our app is not currently optimized for android systems. Please note that if viewing in the browser, reporting a printer issue will not successfully make a server POST request to change the status; this is a bug with local development in Chrome, not an issue with our app, and this feature works in emulation and on devices. 
 
-## Deployment
-FixItMac functions on both android and ios smart phones. To install the app on your phone:
+**Important Note**: When testing, please either comment out the email sending line (www/js/controllers.js, line 86) or change the email in line 85 of the same file to your own email. 
+
+## Device Deployment
+FixItMac functions on both android and ios smart phones. To install the app on your phone using Ionic View:
 
 1. Create an ionic view account at https://apps.ionic.io/login
 2. Create a template app by clicking the green "New App" button at the top-right-hand-side of the web page
@@ -29,6 +34,11 @@ FixItMac functions on both android and ios smart phones. To install the app on y
 8. Once the app is sync, select view app
 
 You will now be able to view the FixItMac app on your smart phone!
+
+To directly download the native iOS or Android versions, build the native code using `ionic build ios` or `ionic build android` (need the Ionic CLI installed). A corresponding folder will be created or updated in the platforms folder, where you can access all of the necessary files for the native app as an Xcode or AndroidStudio project. This github project already contains the latest ios build. 
+Please note that our app is currently optimized for iOS and has not been tested very thoroughly on android. There are a few problems on the android version, such as formatting issues, that have not yet been addressed. However, the iOS app is fully functional as intended. 
+
+**Important Note**: When testing, please either comment out the email sending line (www/js/controllers.js, line 86) or change the email in line 85 of the same file to your own email. 
 
 ## Usage
 On the home page, you will see the list of printers with red and green icons reflecting the status of the printers. If the icons are red, it means the printer in that location is in the process of getting fixed. If the icon is green, it means that the printer is functioning correctly.  Each printer is categorized by its location and listed alphabetically by name.
@@ -44,6 +54,8 @@ Once the current app is used by many students and gets positive feedback, FixItM
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request
+
+**Important Note**: When testing, please either comment out the email sending line (www/js/controllers.js, line 86) or change the email in line 85 of the same file to your own email. 
 
 ## History
 FixItMac was created by students at Macalester College throughout their duration in a Software Design and Development course in the spring of 2016.

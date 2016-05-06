@@ -82,8 +82,8 @@ angular.module('starter.controllers', [])
           link = link + "\nOr the following link to indicate all problems have been fixed: \n    http://fixitmac.herokuapp.com/printers/"+$scope.printer.printerID+"/setworking";
           emailText = emailText + "\n\nPlease click the link(s) below when the problem is fixed:\n"
             + link + "\n\nThank you!\n\nBest,\nFixItMac";
-          var emailAddress = "cmolho@macalester.edu";
-          Email.send({text:emailText, address:emailAddress}); ///TODO uncomment to send email
+          var emailAddress = "cmolho@macalester.edu";         //TODO replace with your email for testing. Final version would use $scope.printer.email for associated email from database.
+          Email.send({text:emailText, address:emailAddress});
           document.location.href= "#/reward/";
         }
       });
